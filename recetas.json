@@ -1,0 +1,41 @@
+[{
+        "nombre": "Ensalada fresca",
+        "ingredientes": ["lechuga", "tomate", "pepino", "aceite", "limon"]
+    },
+    {
+        "nombre": "Tortilla de papas",
+        "ingredientes": ["papas", "huevos", "cebolla", "aceite"]
+    },
+    {
+        "nombre": "Panqueques",
+        "ingredientes": ["harina", "leche", "huevos", "azucar"]
+    },
+    {
+        "nombre": "Sopa de verduras",
+        "ingredientes": ["zanahoria", "papa", "cebolla", "agua", "sal"]
+    },
+    {
+        "nombre": "Arroz con pollo",
+        "ingredientes": ["arroz", "pollo", "cebolla", "pimiento", "ajo"]
+    },
+    {
+        "nombre": "Spaghetti al ajo",
+        "ingredientes": ["spaghetti", "ajo", "aceite", "sal"]
+    },
+    {
+        "nombre": "Huevos revueltos",
+        "ingredientes": ["huevos", "sal", "aceite"]
+    },
+    {
+        "nombre": "Sándwich clásico",
+        "ingredientes": ["pan", "jamon", "queso", "lechuga", "tomate"]
+    },
+    {
+        "nombre": "Tostadas francesas",
+        "ingredientes": ["pan", "huevos", "leche", "canela", "azucar"]
+    },
+    {
+        "nombre": "Guacamole",
+        "ingredientes": ["aguacate", "tomate", "cebolla", "limon", "sal"]
+    }
+]
