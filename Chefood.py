@@ -71,7 +71,8 @@ def buscar_combinaciones_recetas(ingredientes_usuario):
 
 class Estado(rx.State):
     ingredientes: list[str] = [""] * 5
-    recetas_generadas: list[dict] = []  # Se define el tipo explícitamente como lista de diccionarios
+    recetas_generadas: list[dict] = []  # Lista de recetas generadas
+    receta_seleccionada: dict = {}  # Receta seleccionada para mostrar detalles
 
     def set_ingrediente(self, valor: str, index: int):
         self.ingredientes[index] = valor
@@ -84,8 +85,15 @@ class Estado(rx.State):
         self.recetas_generadas = buscar_combinaciones_recetas(lista)
         print("Estado.recetas_generadas:", self.recetas_generadas)  # Depuración
 
+    def seleccionar_receta(self, receta):
+        self.receta_seleccionada = receta
+        return rx.redirect("/detalle_receta")
+
     def ir_a_recetas(self):
         return rx.redirect("/recetas")
+    
+    def mostrar_complejidad_espacial(self):
+            print("Mostrar complejidad espacial")  # Acción de depuración
 
 # ------------------------ INTERFAZ ------------------------
 
@@ -114,7 +122,12 @@ def recetas():
             rx.foreach(
                 Estado.recetas_generadas,
                 lambda receta: rx.vstack(
-                    rx.heading(receta.get("nombre", "Receta sin nombre")),
+                    rx.link(
+                        rx.heading(receta.get("nombre", "Receta sin nombre")),
+                        on_click=lambda: Estado.seleccionar_receta(receta),
+                        color="blue",
+                        cursor="pointer"
+                    ),
                     rx.text(
                         ", ".join(receta.get("ingredientes", [])) if isinstance(receta.get("ingredientes", []), list) else "Ingredientes no disponibles",
                         font_size="1em"
@@ -137,8 +150,50 @@ def recetas():
         padding="3em"
     )
 
+def detalle_receta():
+    preparacion = Estado.receta_seleccionada.get("preparacion", [])
+    if not isinstance(preparacion, list):
+        preparacion = []  # Asegurarse de que sea una lista
+
+    return rx.center(
+        rx.vstack(
+            rx.heading(Estado.receta_seleccionada.get("nombre", "Receta sin nombre")),
+            rx.image(src=Estado.receta_seleccionada.get("imagen", ""), width="300px"),
+            rx.text(
+                "Ingredientes:",
+                font_size="1.2em",
+                font_weight="bold"
+            ),
+            rx.text(
+                ", ".join(Estado.receta_seleccionada.get("ingredientes", []))
+                if isinstance(Estado.receta_seleccionada.get("ingredientes", []), list)
+                else "Ingredientes no disponibles",
+                font_size="1em"
+            ),
+            rx.text(
+                "Pasos de preparación:",
+                font_size="1.2em",
+                font_weight="bold"
+            ),
+            rx.ordered_list(
+                rx.foreach(
+                    preparacion,
+                    lambda paso: rx.list_item(paso)
+                )
+            ) if preparacion else rx.text("Pasos de preparación no disponibles.", color="red"),
+            rx.button(
+                "Ver complejidad espacial",
+                on_click=Estado.mostrar_complejidad_espacial,  # Llama al método del estado
+                color_scheme="blue"
+            ),
+            rx.button("Volver", on_click=lambda: rx.redirect("/recetas")),
+            spacing="4",
+        ),
+        padding="3em"
+    )
 # ------------------------ APP ------------------------
 
 app = rx.App()
 app.add_page(index, route="/")
 app.add_page(recetas, route="/recetas")
+app.add_page(detalle_receta, route="/detalle_receta")

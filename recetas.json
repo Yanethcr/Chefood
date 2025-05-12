@@ -1,41 +1,34 @@
-[{
+[
+    {
         "nombre": "Ensalada fresca",
-        "ingredientes": ["lechuga", "tomate", "pepino", "aceite", "limon"]
+        "ingredientes": [
+            "lechuga",
+            "tomate",
+            "pepino",
+            "aceite",
+            "limon"
+        ],
+        "preparacion": [
+            "Lava y corta todos los ingredientes.",
+            "Mezcla en un bol.",
+            "Añade aceite y limón al gusto."
+        ],
+        "imagen": "https://example.com/ensalada_fresca.jpg"
     },
     {
         "nombre": "Tortilla de papas",
-        "ingredientes": ["papas", "huevos", "cebolla", "aceite"]
-    },
-    {
-        "nombre": "Panqueques",
-        "ingredientes": ["harina", "leche", "huevos", "azucar"]
-    },
-    {
-        "nombre": "Sopa de verduras",
-        "ingredientes": ["zanahoria", "papa", "cebolla", "agua", "sal"]
-    },
-    {
-        "nombre": "Arroz con pollo",
-        "ingredientes": ["arroz", "pollo", "cebolla", "pimiento", "ajo"]
-    },
-    {
-        "nombre": "Spaghetti al ajo",
-        "ingredientes": ["spaghetti", "ajo", "aceite", "sal"]
-    },
-    {
-        "nombre": "Huevos revueltos",
-        "ingredientes": ["huevos", "sal", "aceite"]
-    },
-    {
-        "nombre": "Sándwich clásico",
-        "ingredientes": ["pan", "jamon", "queso", "lechuga", "tomate"]
-    },
-    {
-        "nombre": "Tostadas francesas",
-        "ingredientes": ["pan", "huevos", "leche", "canela", "azucar"]
-    },
-    {
-        "nombre": "Guacamole",
-        "ingredientes": ["aguacate", "tomate", "cebolla", "limon", "sal"]
+        "ingredientes": [
+            "papas",
+            "huevos",
+            "cebolla",
+            "aceite"
+        ],
+        "preparacion": [
+            "Pela y corta las papas y la cebolla.",
+            "Fríelas en aceite caliente.",
+            "Bate los huevos y mezcla con las papas.",
+            "Cocina en una sartén hasta que esté dorada."
+        ],
+        "imagen": "https://example.com/tortilla_papas.jpg"
     }
 ]
