@@ -1,7 +1,7 @@
 import reflex as rx
 import sqlite3
 import os
-import difflib
+import json
 from unidecode import unidecode
 
 DB_PATH = "chefood.db"
@@ -25,93 +25,53 @@ def insertar_producto(nombre):
     conn.commit()
     conn.close()
 
-# ------------------------ RECETAS EN MEMORIA ------------------------
+# ------------------------ CARGAR RECETAS DESDE JSON ------------------------
 
-RECETAS = [
-    {
-        "nombre": "Ensalada fresca",
-        "ingredientes": ["lechuga", "tomate", "pepino", "aceite", "limon"],
-        "instrucciones": "Lava y corta las verduras. Mezcla todo en un bol, agrega aceite y jugo de limón al gusto.",
-        "imagen": "https://www.recetasgratis.net/files/receta/8241-ensalada-fresca-facil.jpg"
-    },
-    {
-        "nombre": "Tortilla de papas",
-        "ingredientes": ["papas", "huevos", "cebolla", "aceite"],
-        "instrucciones": "Fríe las papas y la cebolla en aceite. Bate los huevos y mézclalos con las papas cocidas. Cocina en sartén hasta dorar.",
-        "imagen": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/ff232bbc59dd4b30a1788a4f0f56b93e.jpg"
-    },
-    {
-        "nombre": "Panqueques",
-        "ingredientes": ["harina", "leche", "huevos", "azucar"],
-        "instrucciones": "Mezcla todos los ingredientes hasta tener una masa homogénea. Cocina en una sartén por ambos lados.",
-        "imagen": "https://assets.elgourmet.com/wp-content/uploads/2023/01/panqueques-dulces.jpg"
-    },
-    {
-        "nombre": "Guacamole",
-        "ingredientes": ["aguacate", "tomate", "cebolla", "limon", "sal"],
-        "instrucciones": "Tritura el aguacate y mezcla con los demás ingredientes picados. Ajusta sal y limón al gusto.",
-        "imagen": "https://www.pequerecetas.com/wp-content/uploads/2021/07/receta-de-guacamole.jpg"
-    }
-]
+def cargar_recetas_desde_json():
+    with open("recetas.json", "r", encoding="utf-8") as file:
+        return json.load(file)
 
-def cargar_recetas():
-    return RECETAS
+RECETAS_JSON = cargar_recetas_desde_json()
+
+# ------------------------ BACKTRACKING PARA GENERAR RECETAS ------------------------
 
 def normalizar(ingrediente):
     return unidecode(ingrediente.strip().lower())
 
-def buscar_receta(ingredientes_usuario):
-    recetas = cargar_recetas()
+def generar_recetas_backtracking(ingredientes_usuario, recetas, combinacion_actual, indice, resultados):
+    # Caso base: si hemos procesado todas las recetas
+    if indice == len(recetas):
+        return
+
+    receta = recetas[indice]
+    ingredientes_receta = set(normalizar(i) for i in receta["ingredientes"])
+    ingredientes_usuario_set = set(ingredientes_usuario)
+
+    # Calcular los ingredientes faltantes
+    faltantes = list(ingredientes_receta - ingredientes_usuario_set)
+
+    # Permitir la receta si faltan 0, 1 o 2 ingredientes
+    if len(faltantes) <= 2:
+        receta_con_faltantes = receta.copy()
+        receta_con_faltantes["faltantes"] = faltantes
+        resultados.append(receta_con_faltantes)
+
+    # Continuar con la siguiente receta
+    generar_recetas_backtracking(ingredientes_usuario, recetas, combinacion_actual, indice + 1, resultados)
+
+def buscar_combinaciones_recetas(ingredientes_usuario):
+    recetas = RECETAS_JSON
     ingredientes_usuario = [normalizar(i) for i in ingredientes_usuario if i.strip()]
-    print("Ingredientes normalizados del usuario:", ingredientes_usuario)
-
-    recetas_normalizadas = []
-    for receta in recetas:
-        receta_ingredientes = [normalizar(i) for i in receta["ingredientes"]]
-        recetas_normalizadas.append((receta, receta_ingredientes))
-
-    # Búsqueda exacta
-    for receta, receta_ingredientes in recetas_normalizadas:
-        if set(receta_ingredientes).issubset(set(ingredientes_usuario)):
-            return receta
-
-    # Búsqueda con 1 ingrediente faltante
-    for receta, receta_ingredientes in recetas_normalizadas:
-        faltantes = set(receta_ingredientes) - set(ingredientes_usuario)
-        if len(faltantes) == 1:
-            return {
-                "nombre": f"{receta['nombre']} (faltando 1 ingrediente)",
-                "ingredientes": receta["ingredientes"],
-                "instrucciones": "Falta un ingrediente para ver los pasos completos.",
-                "imagen": "https://cdn-icons-png.flaticon.com/512/2748/2748558.png"
-            }
-
-    # Búsqueda aproximada
-    for receta, receta_ingredientes in recetas_normalizadas:
-        coincidencias = 0
-        for ingrediente in receta_ingredientes:
-            similares = difflib.get_close_matches(ingrediente, ingredientes_usuario, n=1, cutoff=0.8)
-            if similares:
-                coincidencias += 1
-        if coincidencias >= len(receta_ingredientes) - 1:
-            return {
-                "nombre": f"{receta['nombre']} (coincidencia aproximada)",
-                "ingredientes": receta["ingredientes"],
-                "instrucciones": receta["instrucciones"],
-                "imagen": receta["imagen"]
-            }
-
-    return {
-        "nombre": "Sin resultados",
-        "instrucciones": "No se encontraron recetas con esos ingredientes.",
-        "imagen": "https://cdn-icons-png.flaticon.com/512/751/751463.png"
-    }
+    resultados = []
+    generar_recetas_backtracking(ingredientes_usuario, recetas, [], 0, resultados)
+    print("Recetas generadas:", resultados)  # Depuración
+    return resultados
 
 # ------------------------ ESTADO ------------------------
 
 class Estado(rx.State):
     ingredientes: list[str] = [""] * 5
-    receta_generada: dict = {}
+    recetas_generadas: list[dict] = []  # Se define el tipo explícitamente como lista de diccionarios
 
     def set_ingrediente(self, valor: str, index: int):
         self.ingredientes[index] = valor
@@ -119,12 +79,13 @@ class Estado(rx.State):
     def agregar_campo(self):
         self.ingredientes.append("")
 
-    def enviar_receta(self):
+    def enviar_recetas(self):
         lista = [normalizar(i) for i in self.ingredientes if i.strip()]
-        self.receta_generada = buscar_receta(lista)
+        self.recetas_generadas = buscar_combinaciones_recetas(lista)
+        print("Estado.recetas_generadas:", self.recetas_generadas)  # Depuración
 
-    def ir_a_receta(self):
-        return rx.redirect("/receta")
+    def ir_a_recetas(self):
+        return rx.redirect("/recetas")
 
 # ------------------------ INTERFAZ ------------------------
 
@@ -141,17 +102,35 @@ def index():
             )
         ),
         rx.button("Agregar otro ingrediente", on_click=Estado.agregar_campo),
-        rx.button("Enviar", on_click=[Estado.enviar_receta, Estado.ir_a_receta], color_scheme="green"),
+        rx.button("Enviar", on_click=[Estado.enviar_recetas, Estado.ir_a_recetas], color_scheme="green"),
         spacing="4",
         padding="2em"
     )
 
-def receta():
+def recetas():
     return rx.center(
         rx.vstack(
-            rx.heading(Estado.receta_generada.get("nombre", "Receta")),
-            rx.image(src=Estado.receta_generada.get("imagen", ""), width="300px"),
-            rx.text(Estado.receta_generada.get("instrucciones", ""), font_size="1.2em"),
+            rx.heading("Recetas generadas"),
+            rx.foreach(
+                Estado.recetas_generadas,
+                lambda receta: rx.vstack(
+                    rx.heading(receta.get("nombre", "Receta sin nombre")),
+                    rx.text(
+                        ", ".join(receta.get("ingredientes", [])) if isinstance(receta.get("ingredientes", []), list) else "Ingredientes no disponibles",
+                        font_size="1em"
+                    ),
+                    rx.cond(
+                        receta.get("faltantes") is not None,
+                        rx.text(
+                            f"Faltantes: {', '.join(receta.get('faltantes', [])) if isinstance(receta.get('faltantes', []), list) else 'No disponible'}",
+                            font_size="0.9em",
+                            color="red"
+                        )
+                    ),
+                    rx.image(src=receta.get("imagen", ""), width="300px"),
+                    spacing="2"
+                )
+            ),
             rx.button("Volver", on_click=lambda: rx.redirect("/")),
             spacing="4",
         ),
@@ -162,4 +141,4 @@ def receta():
 
 app = rx.App()
 app.add_page(index, route="/")
-app.add_page(receta, route="/receta")
+app.add_page(recetas, route="/recetas")
