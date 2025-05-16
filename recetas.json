@@ -14,7 +14,7 @@
             "Mezcla en un bol.",
             "Añade aceite y limón al gusto."
         ],
-        "imagen": "https://example.com/ensalada_fresca.jpg"
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-muRRhlAXGR1eOrBXo0RSH4cne3sUJRCCiA&s"
     },
     {
         "nombre": "Tortilla de papas",
@@ -30,6 +30,78 @@
             "Bate los huevos y mezcla con las papas.",
             "Cocina en una sartén hasta que esté dorada."
         ],
-        "imagen": "https://example.com/tortilla_papas.jpg"
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoaqJRl0a-_KrT0ojy2xZHYlSLmoGCjE7fEw&s"
+    },
+    {
+        "nombre": "Albondigas",
+        "ingredientes": [
+            "carne molida",
+            "huevo",
+            "jitomate",
+            "cebolla",
+            "ajo",
+            "comino"
+        ],
+        "preparacion": [
+            "Moler Jitomate con la cebolla,ajo y cominos.",
+            "Poner a freir lo de la liculadora.",
+            "Revolver la carne molida con el huevo.",
+            "Formar las bolitas y agregarlas al jitomate y sal al gusto."
+        ],
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAfe30cs_xWrjEZ2okYn8PXyhyAPaf-GoPww&s"
+    },
+    {
+        "nombre": "Chimichangas",
+        "ingredientes": [
+            "salchichas",
+            "elote",
+            "aceite",
+            "cebolla",
+            "queso",
+            "crema",
+            "tortillas",
+            "pimienta",
+            "sal"
+        ],
+        "preparacion": [
+            "Cortar finamente 1/2 cebolla y salchichas.",
+            "Freir la cebolla en un sarten y rayar el queso.",
+            "Revolver todos lo ingredientes(sal al gusto).",
+            "Hacer tipo tacos del guisado y freir los tacos."
+        ],
+        "imagen": "https://cocina-familiar.com/wp-content/uploads/2022/11/chimichanga-de-pollo-crujiente-y-sabrosa.jpg"
+    },
+    {
+        "nombre": "Ensalada de Fresa y Mango",
+        "ingredientes": [
+            "fresas",
+            "mango",
+            "lechuga",
+            "vinagreta"
+        ],
+        "preparacion": [
+            "Picar en rodajas las fresas.",
+            "Picar en cuadros el mago.",
+            "Picar en tiras la lechuga.",
+            "Mezclar los ingredientes con un poco de vinagreta."
+        ],
+        "imagen": "https://i.ytimg.com/vi/ropTreyd5Rw/maxresdefault.jpg"
+    },
+    {
+        "nombre": "Pay de limon",
+        "ingredientes": [
+            "Limon",
+            "galletas",
+            "leche condensada",
+            "leche evaporada"
+        ],
+        "preparacion": [
+            "Lavar y cortar los limones.",
+            "Licuar las leches con el jugo de limon.",
+            "En un traste poner por capas galletas y la mezcñlar anteriornmente hecha.",
+            "Meter al refrigerador por 2 hrs.",
+            "Recomendacion: Decorar con galletas, limon y chocolate"
+        ],
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTudx9QFSmwj9EH7CMyWapoMQ0A5u9ieWKUXA&s"
     }
 ]
