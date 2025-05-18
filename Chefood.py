@@ -251,6 +251,28 @@ def detalle_receta():
             # Título principal
             rx.heading(Estado.receta_nombre, size="1"),
             
+            # Imagen de la receta (nuevo componente)
+            rx.cond(
+                Estado.receta_imagen != "",
+                rx.image(
+                    src=Estado.receta_imagen,
+                    width="100%",
+                    height="300px",
+                    object_fit="cover",
+                    border_radius="md",
+                    margin_bottom="1.5em"
+                ),
+                rx.box(
+                    rx.text("No hay imagen disponible para esta receta", font_style="italic"),
+                    padding="1em",
+                    background="rgba(0,0,0,0.05)",
+                    border_radius="md",
+                    width="100%",
+                    text_align="center",
+                    margin_bottom="1.5em"
+                )
+            ),
+            
             # Sección de ingredientes
             rx.box(
                 rx.vstack(
