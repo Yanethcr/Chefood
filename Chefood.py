@@ -337,6 +337,11 @@ def detalle_receta():
                     on_click=lambda: rx.redirect("/"),
                     color_scheme="green"
                 ),
+                rx.button(
+                    "Ver backtraking", 
+                    #on_click=lambda: rx.redirect("/"),
+                    color_scheme="blue"
+                ),
                 width="100%",
                 justify="between",
                 margin_top="2em"
