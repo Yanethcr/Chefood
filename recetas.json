@@ -217,5 +217,329 @@
             "Servir frío con hielo."
         ],
         "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2013/05/Agua-de-Horchata-1.jpg"
+    },
+    {
+        "nombre": "Arroz a la Mexicana",
+        "ingredientes": [
+            "arroz",
+            "jitomate",
+            "cebolla",
+            "ajo",
+            "caldo de pollo",
+            "aceite"
+        ],
+        "preparacion": [
+            "Freír el arroz con ajo y cebolla en aceite hasta dorar.",
+            "Licuar el jitomate con caldo de pollo y agregar al arroz.",
+            "Cocinar a fuego bajo hasta que absorba todo el líquido."
+        ],
+        "imagen": "https://cdn7.kiwilimon.com/recetaimagen/1656/640x426/th5-640x426-7895.jpg"
+    },
+    {
+        "nombre": "Sopa de Lentejas",
+        "ingredientes": [
+            "lentejas",
+            "zanahoria",
+            "papa",
+            "cebolla",
+            "ajo",
+            "caldo de pollo",
+            "sal"
+        ],
+        "preparacion": [
+            "Remojar lentejas 30 minutos.",
+            "Cocinar con verduras picadas y caldo.",
+            "Sazonar con sal y servir caliente."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2013/10/sopa-de-lentejas-1.jpg"
+    },
+    {
+        "nombre": "Chilaquiles Rojos",
+        "ingredientes": [
+            "totopos",
+            "salsa roja",
+            "cebolla",
+            "queso fresco",
+            "crema",
+            "aceite"
+        ],
+        "preparacion": [
+            "Calentar la salsa roja en una sartén.",
+            "Agregar los totopos y mezclar suavemente.",
+            "Servir con crema, queso y cebolla picada."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2014/04/chilaquiles-rojos-1.jpg"
+    },
+    {
+        "nombre": "Huevos Revueltos con Ejotes",
+        "ingredientes": [
+            "huevos",
+            "ejotes",
+            "cebolla",
+            "aceite",
+            "sal"
+        ],
+        "preparacion": [
+            "Saltear ejotes y cebolla en aceite.",
+            "Agregar huevos batidos y revolver hasta cuajar.",
+            "Sazonar con sal al gusto."
+        ],
+        "imagen": "https://i.blogs.es/5a0d6e/huevos-ejotes/1366_2000.jpg"
+    },
+    {
+        "nombre": "Quesadillas de Papa",
+        "ingredientes": [
+            "tortillas",
+            "papas cocidas",
+            "queso Oaxaca",
+            "aceite",
+            "sal"
+        ],
+        "preparacion": [
+            "Machacar las papas y mezclar con sal.",
+            "Rellenar tortillas con papa y queso.",
+            "Dorar en comal hasta que el queso se derrita."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/quesadillas-de-papa-1.jpg"
+    },
+    {
+        "nombre": "Espagueti con Atún",
+        "ingredientes": [
+            "pasta",
+            "atún en lata",
+            "jitomate",
+            "cebolla",
+            "ajo",
+            "aceite"
+        ],
+        "preparacion": [
+            "Cocinar la pasta al dente.",
+            "Sofreír jitomate, cebolla y ajo.",
+            "Agregar atún escurrido y mezclar con la pasta."
+        ],
+        "imagen": "https://www.pequerecetas.com/wp-content/uploads/2013/07/espaguetis-con-atun.jpg"
+    },
+    {
+        "nombre": "Frijoles Charros",
+        "ingredientes": [
+            "frijoles cocidos",
+            "tocino",
+            "chorizo",
+            "jitomate",
+            "cebolla",
+            "cilantro"
+        ],
+        "preparacion": [
+            "Freír tocino y chorizo.",
+            "Agregar jitomate y cebolla picados.",
+            "Mezclar con frijoles y decorar con cilantro."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/04/frijoles-charros-1.jpg"
+    },
+    {
+        "nombre": "Tortas de Jamón",
+        "ingredientes": [
+            "bolillo",
+            "jamón",
+            "aguacate",
+            "jitomate",
+            "mayonesa",
+            "queso panela"
+        ],
+        "preparacion": [
+            "Tostar ligeramente el bolillo.",
+            "Untar mayonesa y aguacate.",
+            "Agregar jamón, jitomate y queso."
+        ],
+        "imagen": "https://cdn7.kiwilimon.com/recetaimagen/30358/42345.jpg"
+    },
+    {
+        "nombre": "Enfrijoladas",
+        "ingredientes": [
+            "tortillas",
+            "frijoles refritos",
+            "queso fresco",
+            "cebolla",
+            "crema"
+        ],
+        "preparacion": [
+            "Bañar tortillas en frijoles licuados.",
+            "Doblar y cubrir con queso, cebolla y crema."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/enfrijoladas-1.jpg"
+    },
+    {
+        "nombre": "Pan con Huevo",
+        "ingredientes": [
+            "pan de caja",
+            "huevos",
+            "leche",
+            "mantequilla",
+            "sal"
+        ],
+        "preparacion": [
+            "Batir huevos con leche y sal.",
+            "Empapar pan en la mezcla.",
+            "Freír en mantequilla hasta dorar."
+        ],
+        "imagen": "https://i.blogs.es/5a0d6e/pan-huevo/1366_2000.jpg"
+    },
+    {
+        "nombre": "Sopa de Fideo",
+        "ingredientes": [
+            "fideo",
+            "jitomate",
+            "cebolla",
+            "ajo",
+            "caldo de pollo",
+            "aceite"
+        ],
+        "preparacion": [
+            "Dorar fideo en aceite.",
+            "Licuar jitomate con cebolla y ajo.",
+            "Agregar caldo y cocinar hasta espesar."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/sopa-de-fideo-1.jpg"
+    },
+    {
+        "nombre": "Pico de Gallo",
+        "ingredientes": [
+            "jitomate",
+            "cebolla",
+            "cilantro",
+            "limón",
+            "chile serrano",
+            "sal"
+        ],
+        "preparacion": [
+            "Picar finamente todos los ingredientes.",
+            "Mezclar y sazonar con limón y sal."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/pico-de-gallo-1.jpg"
+    },
+    {
+        "nombre": "Huevos a la Mexicana",
+        "ingredientes": [
+            "huevos",
+            "jitomate",
+            "cebolla",
+            "chile verde",
+            "aceite",
+            "sal"
+        ],
+        "preparacion": [
+            "Saltear jitomate, cebolla y chile.",
+            "Agregar huevos batidos y revolver.",
+            "Sazonar con sal."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/huevos-a-la-mexicana-1.jpg"
+    },
+    {
+        "nombre": "Tostadas de Atún",
+        "ingredientes": [
+            "tostadas",
+            "atún en lata",
+            "aguacate",
+            "lechuga",
+            "jitomate",
+            "mayonesa"
+        ],
+        "preparacion": [
+            "Mezclar atún con mayonesa.",
+            "Untar en tostadas y cubrir con verduras."
+        ],
+        "imagen": "https://cdn7.kiwilimon.com/recetaimagen/30358/42345.jpg"
+    },
+    {
+        "nombre": "Arroz con Leche",
+        "ingredientes": [
+            "arroz",
+            "leche",
+            "canela",
+            "azúcar",
+            "pasas"
+        ],
+        "preparacion": [
+            "Cocinar arroz con leche y canela.",
+            "Endulzar con azúcar y agregar pasas.",
+            "Servir frío o caliente."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/arroz-con-leche-1.jpg"
+    },
+    {
+        "nombre": "Papas con Chorizo",
+        "ingredientes": [
+            "papas",
+            "chorizo",
+            "cebolla",
+            "aceite",
+            "sal"
+        ],
+        "preparacion": [
+            "Cocinar papas en cubos.",
+            "Freír chorizo con cebolla.",
+            "Mezclar y sazonar con sal."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/papas-con-chorizo-1.jpg"
+    },
+    {
+        "nombre": "Sándwich de Queso Fundido",
+        "ingredientes": [
+            "pan de caja",
+            "queso manchego",
+            "mantequilla",
+            "jitomate"
+        ],
+        "preparacion": [
+            "Rellenar pan con queso y jitomate.",
+            "Tostar en sartén con mantequilla."
+        ],
+        "imagen": "https://i.blogs.es/5a0d6e/sandwich-queso/1366_2000.jpg"
+    },
+    {
+        "nombre": "Calabazas Rellenas",
+        "ingredientes": [
+            "calabacitas",
+            "queso fresco",
+            "elote",
+            "crema",
+            "sal"
+        ],
+        "preparacion": [
+            "Vaciar calabacitas y rellenar con mezcla de elote y queso.",
+            "Hornear 20 minutos y servir con crema."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/calabazas-rellenas-1.jpg"
+    },
+    {
+        "nombre": "Aguas Frescas de Limón",
+        "ingredientes": [
+            "limones",
+            "azúcar",
+            "agua",
+            "hielo"
+        ],
+        "preparacion": [
+            "Exprimir limones y mezclar con agua.",
+            "Endulzar al gusto y servir con hielo."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/agua-de-limón-1.jpg"
+    },
+    {
+        "nombre": "Hotcakes Caseros",
+        "ingredientes": [
+            "harina",
+            "huevo",
+            "leche",
+            "mantequilla",
+            "azúcar",
+            "polvo para hornear"
+        ],
+        "preparacion": [
+            "Mezclar todos los ingredientes.",
+            "Cocinar en sartén hasta burbujear.",
+            "Voltear y dorar del otro lado."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2018/08/hotcakes-1.jpg"
     }
 ]
