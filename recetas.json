@@ -100,26 +100,122 @@
             "Licuar las leches con el jugo de limon.",
             "En un traste poner por capas galletas y la mezcñlar anteriornmente hecha.",
             "Meter al refrigerador por 2 hrs.",
-            "Recomendacion: Decorar con galletas, limon y chocolate."
+            "Recomendacion: Decorar con galletas, limon y chocolate"
         ],
         "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTudx9QFSmwj9EH7CMyWapoMQ0A5u9ieWKUXA&s"
-    }
-    ,
+    },
     {
-        "nombre": "Pechugas con brocoli",
+        "nombre": "Pasta Alfredo",
         "ingredientes": [
-            "pechuga",
-            "cebolla",
-            "brocoli",
-            "queso debra"
+            "pasta",
+            "mantequilla",
+            "crema para batir",
+            "queso parmesano",
+            "ajo",
+            "sal",
+            "pimienta"
         ],
         "preparacion": [
-            "Cortar en trozos pequeños la pechuga.",
-            "Cortar en pedazos pequeños el brocoli.",
-            "Rebanar finamente media cebolla.",
-            "Hervir todos los ingredietes.",
-            "Mientras este caliente desmenusa el queso, colocalo y revuelvelo con la mezcla."
+            "Cocinar la pasta al dente.",
+            "Derretir mantequilla y dorar el ajo picado.",
+            "Añadir crema y reducir a fuego lento.",
+            "Agregar queso parmesano hasta obtener una salsa cremosa.",
+            "Mezclar con la pasta y sazonar con sal y pimienta."
         ],
-        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Z2IgCw1A8PE0PS7BN9wz24Y0tgDgmqwRVQ&s"
+        "imagen": "https://www.simplyrecipes.com/thmb/4_-m1rDZu1Js1Xhb5h-7FZ3UwRw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Homemade-Pasta-Alfredo-LEAD-1-1b5a0b7a4e4a4a1d8b1b0b0b0b0b0b0b.jpg"
+    },
+    {
+        "nombre": "Sopa de tomate",
+        "ingredientes": [
+            "tomates",
+            "cebolla",
+            "ajo",
+            "caldo de pollo",
+            "crema",
+            "albahaca",
+            "sal",
+            "pimienta"
+        ],
+        "preparacion": [
+            "Asar los tomates con cebolla y ajo.",
+            "Licuar los vegetales asados con caldo de pollo.",
+            "Colar y poner a hervir la mezcla.",
+            "Añadir crema, albahaca y sazonar al gusto."
+        ],
+        "imagen": "https://www.inspiredtaste.net/wp-content/uploads/2018/09/Easy-Tomato-Soup-Recipe-2-1200.jpg"
+    },
+    {
+        "nombre": "Chiles en nogada",
+        "ingredientes": [
+            "chiles poblanos",
+            "carne molida",
+            "frutas (manzana, pera, durazno)",
+            "almendras",
+            "pasas",
+            "nuez",
+            "crema",
+            "granada",
+            "perejil"
+        ],
+        "preparacion": [
+            "Asar y pelar los chiles.",
+            "Preparar el relleno con carne, frutas y especias.",
+            "Rellenar los chiles.",
+            "Bañar con salsa de nuez y decorar con granada y perejil."
+        ],
+        "imagen": "https://cdn7.kiwilimon.com/recetaimagen/30358/42345.jpg"
+    },
+    {
+        "nombre": "Flan napolitano",
+        "ingredientes": [
+            "huevos",
+            "leche condensada",
+            "leche evaporada",
+            "vainilla",
+            "azúcar"
+        ],
+        "preparacion": [
+            "Caramelizar un molde con azúcar.",
+            "Licuar los demás ingredientes.",
+            "Vaciar en el molde y cocinar a baño María.",
+            "Refrigerar por 4 horas antes de desmoldar."
+        ],
+        "imagen": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail/public/srh_recipes/4e4a8e5b5d5b8d6a2c6c2a8a8a8a8a8a.jpg"
+    },
+    {
+        "nombre": "Tacos al pastor",
+        "ingredientes": [
+            "carne de cerdo",
+            "piña",
+            "chiles guajillo",
+            "achiote",
+            "cebolla",
+            "cilantro",
+            "tortillas"
+        ],
+        "preparacion": [
+            "Marinar la carne con la mezcla de chiles y especias.",
+            "Asar la carne en trompo con rodajas de piña.",
+            "Cortar finamente y servir en tortillas con cebolla y cilantro."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2014/08/tacos-al-pastor-receta-1.jpg"
+    },
+    {
+        "nombre": "Agua de horchata",
+        "ingredientes": [
+            "arroz",
+            "leche evaporada",
+            "canela",
+            "azúcar",
+            "vainilla",
+            "hielo"
+        ],
+        "preparacion": [
+            "Remojar el arroz con canela toda la noche.",
+            "Licuar y colar la mezcla.",
+            "Añadir leche, azúcar y vainilla.",
+            "Servir frío con hielo."
+        ],
+        "imagen": "https://www.mexicoenmicocina.com/wp-content/uploads/2013/05/Agua-de-Horchata-1.jpg"
     }
 ]
