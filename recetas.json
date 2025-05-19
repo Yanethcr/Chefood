@@ -100,8 +100,26 @@
             "Licuar las leches con el jugo de limon.",
             "En un traste poner por capas galletas y la mezcñlar anteriornmente hecha.",
             "Meter al refrigerador por 2 hrs.",
-            "Recomendacion: Decorar con galletas, limon y chocolate"
+            "Recomendacion: Decorar con galletas, limon y chocolate."
         ],
         "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTudx9QFSmwj9EH7CMyWapoMQ0A5u9ieWKUXA&s"
+    }
+    ,
+    {
+        "nombre": "Pechugas con brocoli",
+        "ingredientes": [
+            "pechuga",
+            "cebolla",
+            "brocoli",
+            "queso debra"
+        ],
+        "preparacion": [
+            "Cortar en trozos pequeños la pechuga.",
+            "Cortar en pedazos pequeños el brocoli.",
+            "Rebanar finamente media cebolla.",
+            "Hervir todos los ingredietes.",
+            "Mientras este caliente desmenusa el queso, colocalo y revuelvelo con la mezcla."
+        ],
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Z2IgCw1A8PE0PS7BN9wz24Y0tgDgmqwRVQ&s"
     }
 ]
